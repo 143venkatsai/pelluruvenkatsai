@@ -34,14 +34,14 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           <p className="sm:mt-0 mt-10">
-            I'm a Full Stack Developer with specializing in JavaScript, React to
-            build clean, responsive web applications. I focus on crafting smooth
-            user interfaces and integrating APIs efficiently.
+            I&apos;m a Full Stack Developer with specializing in JavaScript,
+            React to build clean, responsive web applications. I focus on
+            crafting smooth user interfaces and integrating APIs efficiently.
           </p>
           <p className="mt-5">
             Currently, I train students in Full Stack Web Development at Koushik
-            Software Solutions. I've developed projects like a personal notes
-            manager and a YouTube-inspired Nxt Watch platform.
+            Software Solutions. I&apos;ve developed projects like a personal
+            notes manager and a YouTube-inspired Nxt Watch platform.
           </p>
         </motion.div>
       </div>
