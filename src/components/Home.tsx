@@ -7,7 +7,7 @@ export default function Home() {
       className="flex flex-col items-center justify-center text-center mt-20 mb-20"
       id="home"
     >
-      <p className="text-sm text-slate-400 mb-3">Hello, I'm</p>
+      <p className="text-sm text-slate-400 mb-3">Hello, I&apos;m</p>
       <h1 className="text-4xl text-white font-bold">Pelluru Venkat Sai</h1>
       <div className="text-sm text-slate-400 mt-2 flex justify-center w-full">
         <Typewriter
@@ -35,7 +35,7 @@ export default function Home() {
           href="#contact"
           className="bg-green-600 text-blue-950 text-sm py-3 px-5 rounded"
         >
-          Let's Connect
+          Let&apos;s Connect
         </a>
       </div>
     </div>

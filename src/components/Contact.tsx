@@ -39,7 +39,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
             >
               <span className="bg-green-950 p-2 text-lg text-green-400 rounded-full mr-4 transition-all transform hover:scale-125 duration-200">
                 {contact.icon}
@@ -53,7 +53,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
           <input
             type="text"

@@ -57,14 +57,14 @@ export default function Projects() {
         Portfolio
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">
-        {projects.map((item, index) => (
+        {projects.map((item) => (
           <motion.div
             key={item.id}
             className="border border-green-400 p-4 rounded-lg shadow-lg hover:green-blue-500 hover:shadow-md transition-shadow duration-100"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
           >
             <Image
               src={item.image}

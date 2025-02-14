@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className="flex flex-col mb-10" id="about">
@@ -14,11 +16,13 @@ export default function About() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <img
-            src="https://res.cloudinary.com/djk1yczb2/image/upload/v1739163472/WhatsApp_Image_2025-02-10_at_10.26.16_4727fe8b_pv3zqz.jpg"
+          <Image
+            src="/Images/ProfileImage.jpg"
             alt="venkat_img"
+            width={300}
+            height={300}
             className="rounded-3xl w-full h-full shadow-2xl transition-all duration-500 filter grayscale hover:grayscale-0"
           />
         </motion.div>

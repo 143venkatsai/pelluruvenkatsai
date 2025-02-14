@@ -1,6 +1,5 @@
 "use client";
 import { useRef } from "react";
-import { RiCheckboxCircleFill } from "react-icons/ri";
 
 import {
   FaHtml5,
@@ -19,21 +18,21 @@ import { BiLogoMongodb, BiLogoTypescript } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
 
 const skills = [
-  { id: 1, name: "HTML", icon: <FaHtml5 /> },
-  { id: 2, name: "CSS", icon: <FaCss3Alt /> },
-  { id: 3, name: "Bootstrap", icon: <FaBootstrap /> },
-  { id: 4, name: "JavaScript", icon: <FaJsSquare /> },
-  { id: 5, name: "TypeScript", icon: <BiLogoTypescript /> },
-  { id: 6, name: "TailwindCSS", icon: <RiTailwindCssFill /> },
-  { id: 7, name: "React.js", icon: <FaReact /> },
-  { id: 8, name: "Next.js", icon: <TbBrandNextjs /> },
-  { id: 9, name: "Node.js", icon: <FaNodeJs /> },
-  { id: 10, name: "Express.js", icon: <SiExpress /> },
-  { id: 11, name: "SQLite", icon: <SiSqlite /> },
-  { id: 12, name: "MongoDB", icon: <BiLogoMongodb /> },
-  { id: 13, name: "Git", icon: <FaGitAlt /> },
-  { id: 14, name: "GitHub", icon: <FaGithub /> },
-  { id: 15, name: "Python", icon: <FaPython /> },
+  { id: 1, icon: <FaHtml5 /> },
+  { id: 2, icon: <FaCss3Alt /> },
+  { id: 3, icon: <FaBootstrap /> },
+  { id: 4, icon: <FaJsSquare /> },
+  { id: 5, icon: <BiLogoTypescript /> },
+  { id: 6, icon: <RiTailwindCssFill /> },
+  { id: 7, icon: <FaReact /> },
+  { id: 8, icon: <TbBrandNextjs /> },
+  { id: 9, icon: <FaNodeJs /> },
+  { id: 10, icon: <SiExpress /> },
+  { id: 11, icon: <SiSqlite /> },
+  { id: 12, icon: <BiLogoMongodb /> },
+  { id: 13, icon: <FaGitAlt /> },
+  { id: 14, icon: <FaGithub /> },
+  { id: 15, icon: <FaPython /> },
 ];
 
 // Duplicate skills array to create an infinite loop
