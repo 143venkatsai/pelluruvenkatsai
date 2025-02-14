@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 
+import Image from "next/image";
+
 const projects = [
   {
     id: 1,
@@ -64,9 +66,11 @@ export default function Projects() {
             viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <img
+            <Image
               src={item.image}
               alt={item.name}
+              width={300}
+              height={200}
               className="h-[160px] sm:h-[140px] w-full rounded"
             />
             <h2 className="text-center text-white text-md font-bolder py-3">
