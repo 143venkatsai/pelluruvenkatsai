@@ -70,8 +70,8 @@ export default function Projects() {
               src={item.image}
               alt={item.name}
               width={300}
-              height={200}
-              className="h-[160px] sm:h-[140px] w-full rounded"
+              height={250}
+              className="h-[180px] sm:h-[180px] w-full rounded"
             />
             <h2 className="text-center text-white text-md font-bolder py-3">
               {item.name}

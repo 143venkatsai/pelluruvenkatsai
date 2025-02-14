@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <div className="pb-100">
       <Navbar />
-      <div className="flex flex-col md:mx-30 mx-5 lg:mx-40 ">
+      <div className="flex flex-col md:mx-30 mx-5 lg:mx-60 ">
         <Home />
         <About />
         <Skills />

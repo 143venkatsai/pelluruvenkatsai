@@ -12,7 +12,7 @@ export default function About() {
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2">
         <motion.div
-          className="sm:w-[300px] sm:h-[300px] mx-auto sm:mx-0"
+          className="sm:w-[400px] sm:h-[400px] mx-auto sm:mx-0"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false }}
@@ -21,8 +21,8 @@ export default function About() {
           <Image
             src="/Images/ProfileImage.jpg"
             alt="venkat_img"
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             className="rounded-3xl w-full h-full shadow-2xl transition-all duration-500 filter grayscale hover:grayscale-0"
           />
         </motion.div>
