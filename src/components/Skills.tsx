@@ -42,7 +42,7 @@ export default function Skills() {
   const scrollRef = useRef(null);
 
   return (
-    <div id="skills" className="mb-10">
+    <div id="skills" className="mb-10 mt-15">
       <h1 className="text-center sm:mb-10 mb-10 text-2xl text-green-400 font-semibold">
         Skills
       </h1>
