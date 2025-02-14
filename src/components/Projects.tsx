@@ -53,7 +53,7 @@ const projects = [
 export default function Projects() {
   return (
     <div className="my-20" id="portfolio">
-      <h1 className="text-center sm:mb-10 mb-10 text-xl text-green-400 font-semibold">
+      <h1 className="text-center sm:mb-10 mb-10 text-2xl text-green-400 font-semibold">
         Portfolio
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 lg:grid-cols-3">

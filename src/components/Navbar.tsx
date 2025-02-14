@@ -16,7 +16,7 @@ export default function Navbar() {
     { id: "about", icon: <FaUser />, url: "#about" },
     { id: "skills", icon: <FaBriefcase />, url: "#skills" },
     { id: "portfolio", icon: <FaProjectDiagram />, url: "#portfolio" },
-    { id: "contact", icon: <FaEnvelope /> },
+    { id: "contact", icon: <FaEnvelope />, url: "#contact" },
   ];
 
   return (

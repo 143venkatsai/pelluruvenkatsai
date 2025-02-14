@@ -26,8 +26,8 @@ const contactDetails = [
 
 export default function Contact() {
   return (
-    <div className="contact mb-20">
-      <h1 className="text-center sm:mb-10 mb-10 text-xl text-green-400 font-semibold">
+    <div className="contact mb-20" id="contact">
+      <h1 className="text-center sm:mb-10 mb-10 text-2xl text-green-400 font-semibold">
         Contact Me
       </h1>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10">

@@ -43,7 +43,7 @@ export default function Skills() {
 
   return (
     <div id="skills" className="mb-10">
-      <h1 className="text-center sm:mb-10 mb-10 text-xl text-green-400 font-semibold">
+      <h1 className="text-center sm:mb-10 mb-10 text-2xl text-green-400 font-semibold">
         Skills
       </h1>
       <div className="relative overflow-hidden w-full">
