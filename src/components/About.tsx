@@ -1,50 +1,63 @@
 "use client";
 
 import { motion } from "framer-motion";
-
 import Image from "next/image";
+
+const experiencePoints = [
+  "Trains students in Full Stack Web Development at Koushik Software Solutions.",
+  "Builds user-friendly interfaces with React, Next.js, Tailwind CSS, and JavaScript.",
+  "Ships backend-integrated projects with Node.js, Express, MongoDB, and REST APIs.",
+];
 
 export default function About() {
   return (
-    <div className="flex flex-col mb-10" id="about">
-      <h1 className="text-center sm:mb-10 mb-5 text-2xl text-green-400 font-semibold">
-        About Me
-      </h1>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2">
+    <section id="about" className="section-shell glass-panel">
+      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <motion.div
-          className="sm:w-[400px] sm:h-[400px] mx-auto sm:mx-0"
-          initial={{ opacity: 0, y: 50 }}
+          className="relative mx-auto w-full max-w-sm"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
+          <div className="absolute inset-0 -rotate-6 rounded-[2rem] bg-gradient-to-br from-orange-400/25 to-sky-400/20 blur-sm" />
           <Image
             src="/Images/ProfileImage.jpg"
-            alt="venkat_img"
-            width={350}
-            height={350}
-            className="rounded-3xl w-full h-full shadow-2xl transition-all duration-500 filter grayscale hover:grayscale-0"
+            alt="Pelluru Venkat Sai"
+            width={420}
+            height={480}
+            className="relative h-full w-full rounded-[2rem] border border-slate-800 object-cover shadow-2xl"
           />
         </motion.div>
+
         <motion.div
-          className="text-slate-400"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <p className="sm:mt-0 mt-10 text-md">
-            I&apos;m a Full Stack Developer with specializing in JavaScript,
-            React to build clean, responsive web applications. I focus on
-            crafting smooth user interfaces and integrating APIs efficiently.
+          <span className="eyebrow">About me</span>
+          <h2 className="section-title font-[var(--font-display)]">
+            Full stack developer focused on practical products and clean delivery.
+          </h2>
+          <p className="text-muted mt-5 max-w-2xl text-sm leading-7 sm:text-base">
+            I enjoy turning requirements into responsive, production-ready web
+            experiences. My work usually starts with intuitive UI design and
+            finishes with API integration, data handling, and the small details
+            that make a product feel reliable.
           </p>
-          <p className="mt-5 text-md">
-            Currently, I train students in Full Stack Web Development at Koushik
-            Software Solutions. I&apos;ve developed projects like a personal
-            notes manager and a YouTube-inspired Nxt Watch platform.
-          </p>
+          <div className="mt-8 grid gap-4">
+            {experiencePoints.map((point) => (
+              <div
+                key={point}
+                className="rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4 text-sm leading-7 text-slate-300"
+              >
+                {point}
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,40 +1,43 @@
 "use client";
+
 import { useState } from "react";
 import {
-  FaHome,
-  FaUser,
   FaBriefcase,
-  FaProjectDiagram,
   FaEnvelope,
+  FaHome,
+  FaProjectDiagram,
+  FaUser,
 } from "react-icons/fa";
+
+const navItems = [
+  { id: "home", icon: <FaHome />, label: "Home", url: "#home" },
+  { id: "about", icon: <FaUser />, label: "About", url: "#about" },
+  { id: "skills", icon: <FaBriefcase />, label: "Skills", url: "#skills" },
+  { id: "portfolio", icon: <FaProjectDiagram />, label: "Projects", url: "#portfolio" },
+  { id: "contact", icon: <FaEnvelope />, label: "Contact", url: "#contact" },
+];
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
 
-  const navItems = [
-    { id: "home", icon: <FaHome />, url: "#home" },
-    { id: "about", icon: <FaUser />, url: "#about" },
-    { id: "skills", icon: <FaBriefcase />, url: "#skills" },
-    { id: "portfolio", icon: <FaProjectDiagram />, url: "#portfolio" },
-    { id: "contact", icon: <FaEnvelope />, url: "#contact" },
-  ];
-
   return (
-    <nav className="fixed md:top-1/2 md:right-5 md:transform md:-translate-y-1/2 bottom-5 left-1/2 md:left-auto md:translate-x-0 -translate-x-1/2 z-50">
-      <ul className="bg-gray-800/50 backdrop-blur border-2 border-gray-600 rounded-full p-2 flex md:flex-col gap-2 text-white shadow-lg">
+    <nav className="fixed bottom-4 left-1/2 z-50 w-[calc(100%-1.5rem)] max-w-max -translate-x-1/2 lg:left-auto lg:right-6 lg:top-1/2 lg:w-auto lg:translate-x-0 lg:-translate-y-1/2">
+      <ul className="flex items-center gap-2 rounded-full border border-slate-700/70 bg-slate-950/75 p-2 shadow-2xl backdrop-blur-xl lg:flex-col">
         {navItems.map((item) => (
-          <a
-            key={item.id}
-            className={`rounded-full p-2 flex items-center justify-center text-xl cursor-pointer transition-all duration-300 ${
-              active === item.id
-                ? "bg-green-700 text-white"
-                : "hover:bg-gray-600"
-            }`}
-            onClick={() => setActive(item.id)}
-            href={item.url}
-          >
-            {item.icon}
-          </a>
+          <li key={item.id}>
+            <a
+              href={item.url}
+              aria-label={item.label}
+              onClick={() => setActive(item.id)}
+              className={`flex h-11 w-11 items-center justify-center rounded-full text-lg transition ${
+                active === item.id
+                  ? "bg-orange-500 text-slate-950"
+                  : "text-slate-300 hover:bg-slate-800 hover:text-white"
+              }`}
+            >
+              {item.icon}
+            </a>
+          </li>
         ))}
       </ul>
     </nav>

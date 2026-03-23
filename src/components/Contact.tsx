@@ -1,86 +1,126 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-import { MdEmail } from "react-icons/md";
-import { IoLogoWhatsapp } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
 
 const contactDetails = [
   {
     id: 1,
     icon: <MdEmail />,
-    name: "venkatsaipelluru143@gmail.com",
+    label: "Email",
+    value: "venkatsaipelluru@gmail.com",
+    href: "mailto:venkatsaipelluru@gmail.com",
   },
   {
     id: 2,
     icon: <IoLogoWhatsapp />,
-    name: "+91 9705441781",
+    label: "WhatsApp",
+    value: "+91 9705441781",
+    href: "https://wa.me/919705441781",
   },
   {
     id: 3,
     icon: <FaLocationDot />,
-    name: "Nellore Andhra Pradesh",
+    label: "Location",
+    value: "Nellore, Andhra Pradesh",
   },
 ];
 
 export default function Contact() {
   return (
-    <div className="contact mb-20" id="contact">
-      <h1 className="text-center sm:mb-10 mb-10 text-2xl text-green-400 font-semibold">
-        Contact Me
-      </h1>
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="flex flex-col">
-          {contactDetails.map((contact) => (
-            <motion.div
-              key={contact.id}
-              className="flex items-center my-2 relative"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <span className="bg-green-950 p-2 text-lg text-green-400 rounded-full mr-4 transition-all transform hover:scale-125 duration-200">
-                {contact.icon}
-              </span>
-              <span className="text-sm text-green-400">{contact.name}</span>
-            </motion.div>
-          ))}
+    <section id="contact" className="section-shell glass-panel">
+      <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <span className="eyebrow">Contact</span>
+          <h2 className="section-title font-[var(--font-display)]">
+            Let&apos;s build something clean, fast, and useful.
+          </h2>
+          <p className="text-muted mt-4 max-w-xl text-sm leading-7 sm:text-base">
+            Reach out for frontend roles, full stack opportunities, or freelance
+            projects. I&apos;m especially interested in product work that values
+            thoughtful UI and smooth user experience.
+          </p>
+          <div className="mt-8 space-y-4">
+            {contactDetails.map((contact) => {
+              const content = (
+                <div className="flex items-center gap-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4 transition hover:border-slate-700">
+                  <span className="rounded-2xl bg-orange-400/10 p-3 text-xl text-orange-300">
+                    {contact.icon}
+                  </span>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-slate-500">
+                      {contact.label}
+                    </p>
+                    <p className="mt-1 text-sm text-slate-200 sm:text-base">
+                      {contact.value}
+                    </p>
+                  </div>
+                </div>
+              );
+
+              return (
+                <motion.div
+                  key={contact.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {contact.href ? (
+                    <a href={contact.href} target="_blank" rel="noreferrer">
+                      {content}
+                    </a>
+                  ) : (
+                    content
+                  )}
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
+
         <motion.div
-          className="flex flex-col gap-5"
-          initial={{ opacity: 0, y: 50 }}
+          className="rounded-[2rem] border border-slate-800/80 bg-slate-950/55 p-6 sm:p-8"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <input
-            type="text"
-            id="name"
-            placeholder="Your name"
-            required
-            className="bg-transparent border border-green-400 px-2 py-2 text-sm rounded"
-          />
-          <input
-            type="email"
-            id="email"
-            placeholder="Your email"
-            required
-            className="bg-transparent border border-green-400 px-2 py-2 text-sm rounded"
-          />
-          <textarea
-            name=""
-            id=""
-            placeholder="Your message"
-            required
-            className="bg-transparent border border-green-400 px-2 py-2 h-20 w-full text-sm rounded"
-          ></textarea>
-          <button className="text-green-950 border py-2 rounded border-green-400 bg-green-400 hover:text-green-500 hover:bg-transparent hover:border-green-400 transition-all duration-200">
-            Send Message
-          </button>
+          <div className="mb-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-slate-500">
+              Quick introduction
+            </p>
+            <h3 className="mt-3 font-[var(--font-display)] text-2xl font-semibold text-white">
+              Share your idea or opportunity
+            </h3>
+          </div>
+          <form className="grid gap-4">
+            <input
+              type="text"
+              placeholder="Your name"
+              className="rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-orange-400/40"
+            />
+            <input
+              type="email"
+              placeholder="Your email"
+              className="rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-orange-400/40"
+            />
+            <textarea
+              placeholder="Tell me about the role or project"
+              rows={6}
+              className="rounded-2xl border border-slate-800 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-orange-400/40"
+            />
+            <a
+              href="mailto:venkatsaipelluru143@gmail.com"
+              className="inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-orange-400"
+            >
+              Send via Email
+            </a>
+          </form>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
